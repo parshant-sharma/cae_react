@@ -4,15 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "2fr 1fr 1fr 1fr 2fr",
-          background: "#626262",
-          gap: "50px",
-          padding: "60px",
-        }}
-      >
+      <div className="lg:grid lg:grid-cols-[2fr,1fr,1fr,1fr,2fr] md:flex md:flex-column bg-[#626262] gap-[50px] p-[60px]">
         <div>
           <h1 style={{ fontSize: "30px", fontWeight: "700", color: "white" }}>
             CAE 21

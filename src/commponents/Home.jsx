@@ -1,7 +1,7 @@
 import React from "react";
 
 import Header from "./Header";
-import RectangleHome from "../images/Rectangle_Home.png";
+import RectangleHome from "../images/home_img.png";
 import techIcon from "../images/Vector.png";
 import teamIcon from "../images/Vector(1).png";
 import trophyIcon from "../images/Vector(2).png";
@@ -27,6 +27,37 @@ const Home = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          centerMode: true,
+          centerPadding: "5%",
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 1,
+          centerMode: true,
+          centerPadding: "5%",
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          centerPadding: "0",
+        },
+      },
+    ],
   };
 
   var settings1 = {
@@ -38,6 +69,38 @@ const Home = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          centerMode: true,
+          centerPadding: "5%",
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 1,
+          centerMode: true,
+          centerPadding: "5%",
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          // Corrected from settings1 to settings
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          centerPadding: "0",
+        },
+      },
+    ],
   };
 
   return (
@@ -45,38 +108,16 @@ const Home = () => {
       <Header />
       <div style={{ justifyItems: "center" }}>
         <div className="Home">
-          <div style={{ alignContent: "center" }}>
-            <h1 className="Home_heading">
-              Transforming Education For the Digital Age
+          <div className="flex flex-col  items-start justify-center  ">
+            <h1 className="Home_heading text-left text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+              Transforming <br /> Education For the <br /> Digital Age
             </h1>
-            <p
-              style={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                marginTop: "10px",
-                marginBottom: "50px",
-                width: "90%",
-              }}
-            >
+            <p className="font-normal text-sm sm:text-sm md:text-base lg:text-lg leading-tight tracking-normal mt-2 mb-6 sm:mb-8 w-full sm:w-3/4 lg:w-2/3">
               At CAE 21, we’re redefining learning with innovative, scalable
               solutions for students, educators, and institutions worldwide.
             </p>
 
-            <button
-              style={{
-                background: "#000076",
-                color: "white",
-                fontWeight: "500",
-                fontSize: "20px",
-                paddingLeft: "20px",
-                paddingTop: "10px",
-                paddingBottom: "10px",
-                paddingRight: "20px",
-                borderRadius: "5px",
-              }}
-            >
+            <button className="bg-blue-800 text-white font-medium text-xs sm:text-sm md:text-base lg:text-lg py-2 px-8 rounded-md">
               Get Started
             </button>
           </div>
@@ -85,352 +126,179 @@ const Home = () => {
             <img src={RectangleHome} alt="Home Rectangle" />
           </div>
         </div>
-        <div
-          style={{
-            marginTop: "50px",
-            width: "80%",
-            display: "flex",
-            justifyContent: "space-around",
-            background: "#E8E8E8",
-            padding: "20px",
-          }}
-        >
-          <div style={{ justifyItems: "center" }}>
-            <h1
-              style={{
-                color: "#212121",
-                fontWeight: "700",
-                fontSize: "64px",
-                lineHeight: "120%",
-              }}
-            >
-              150<span style={{ color: "blue" }}>+</span>
+
+        <div className="mt-12 w-4/5 flex justify-around bg-gray-200 p-5">
+          <div className="flex flex-col items-center">
+            <h1 className="text-gray-800 font-bold text-2xl text-center md:text-6xl lg:text-7xl xl:text-8xl">
+              150<span className="text-blue-500">+</span>
             </h1>
-            <h1 className="statists_desc">Clients</h1>
+            <h1 className="text-gray-600 text-[10px] md:text-base">Clients</h1>
           </div>
-          <div style={{ justifyItems: "center" }}>
-            <h1
-              style={{
-                color: "#212121",
-                fontWeight: "700",
-                fontSize: "64px",
-                lineHeight: "120%",
-              }}
-            >
-              100<span style={{ color: "blue" }}>k</span>
+          <div className="flex flex-col items-center">
+            <h1 className="text-gray-800 font-bold text-2xl text-center md:text-6xl lg:text-7xl xl:text-8xl">
+              100<span className="text-blue-500">k</span>
             </h1>
-            <h1 className="statists_desc">Students worldwide</h1>
+            <h1 className="text-gray-600 text-[10px] md:text-base">
+              Students worldwide
+            </h1>
           </div>
-          <div style={{ justifyItems: "center" }}>
-            <h1
-              style={{
-                color: "#212121",
-                fontWeight: "700",
-                fontSize: "64px",
-                lineHeight: "120%",
-              }}
-            >
-              45<span style={{ color: "blue" }}>k</span>
+          <div className="flex flex-col items-center">
+            <h1 className="text-gray-800 font-bold text-2xl text-center md:text-6xl lg:text-7xl xl:text-8xl">
+              45<span className="text-blue-500">k</span>
             </h1>
-            <h1 className="statists_desc">Educators</h1>
+            <h1 className="text-gray-600 text-[10px] md:text-base">
+              Educators
+            </h1>
           </div>
-          <div style={{ justifyItems: "center" }}>
-            <h1
-              style={{
-                color: "#212121",
-                fontWeight: "700",
-                fontSize: "64px",
-                lineHeight: "120%",
-              }}
-            >
-              99<span style={{ color: "blue" }}>%</span>
+          <div className="flex flex-col items-center">
+            <h1 className="text-gray-800 font-bold text-2xl text-center md:text-6xl lg:text-7xl xl:text-8xl">
+              99<span className="text-blue-500">%</span>
             </h1>
-            <h1 className="statists_desc">Student satisfactions</h1>
+            <h1 className="text-gray-600 text-[10px] md:text-base">
+              Student satisfactions
+            </h1>
           </div>
         </div>
       </div>
 
-      <div
-        style={{
-          justifyItems: "center",
-          background: "#E8E8E8",
-          marginTop: "40px",
-          padding: "30px",
-          paddingLeft: "20px",
-          paddingRight: "20px",
-        }}
-      >
-        <h1 style={{ fontSize: "48px", fontWeight: "500", padding: "30px" }}>
+      <div className="bg-gray-200 mt-10 px-6 py-8">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium text-center py-8">
           Our Facilities
         </h1>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            gap: "30px",
-            padding: "30px",
-          }}
-        >
-          <div
-            style={{
-              background: "white",
-              padding: "40px",
-              paddingBottom: "30px",
-            }}
-          >
-            <img
-              src={techIcon}
-              style={{ width: "65px", marginBottom: "30px" }}
-            />
-            <h1 className="facilites_heading">Innovative Technology</h1>
-            <p className="facilities_desc">
-              -Leveraging AI, VR, AR, and blockchain to stay ahead of the curve.
+        <div className="our_facilities">
+          <div className="bg-white p-10 pb-8 flex flex-col w-full ">
+            <img src={techIcon} className="w-16 mb-6" alt="Tech Icon" />
+            <h1 className="facilites_heading text-lg sm:text-xl font-semibold ">
+              Innovative Technology
+            </h1>
+            <p className="facilities_desc text-sm sm:text-base ">
+              - Leveraging AI, VR, AR, and blockchain to stay ahead of the
+              curve.
             </p>
           </div>
-          <div
-            style={{
-              background: "white",
-              padding: "40px",
-              paddingTop: "30px",
-              paddingBottom: "30px",
-            }}
-          >
-            <img
-              src={teamIcon}
-              style={{ width: "65px", height: "65px", marginBottom: "20px" }}
-            />
-            <h1 className="facilites_heading">Expert team</h1>
-            <p className="facilities_desc">
-              -A passionate team of educators, developers, and innovators
+          <div className="bg-white p-10 pt-8 pb-8 flex flex-col w-full ">
+            <img src={teamIcon} className="w-16 h-16 mb-5" alt="Team Icon" />
+            <h1 className="facilites_heading text-lg sm:text-xl font-semibold ">
+              Expert Team
+            </h1>
+            <p className="facilities_desc text-sm sm:text-base ">
+              - A passionate team of educators, developers, and innovators
               driving impactful change.
             </p>
           </div>
-          <div
-            style={{
-              background: "white",
-              padding: "40px",
-              paddingTop: "30px",
-              paddingBottom: "30px",
-            }}
-          >
+          <div className="bg-white p-10 pt-8 pb-8 flex flex-col w-full ">
             <img
               src={trophyIcon}
-              style={{ width: "65px", height: "65px", marginBottom: "20px" }}
+              className="w-16 h-16 mb-5"
+              alt="Trophy Icon"
             />
-            <h1 className="facilites_heading">Expert Team</h1>
-            <p className="facilities_desc">
-              -A passionate team of educators, developers, and innovators
-              driving impactful change.
+            <h1 className="facilites_heading text-lg sm:text-xl font-semibold ">
+              Award-Winning Results
+            </h1>
+            <p className="facilities_desc text-sm sm:text-base ">
+              - Recognized for excellence and innovative educational solutions.
             </p>
           </div>
         </div>
       </div>
+
       <div
         style={{
           backgroundImage: `url(${crousal_bg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
+        className="relative"
       >
-        <h1
-          style={{
-            fontSize: "48px",
-            fontWeight: "500",
-            color: "white",
-            textAlign: "center",
-            paddingTop: "40px",
-          }}
-        >
+        <h1 className="text-white text-center text-4xl font-medium pt-10">
           Explore Our Services
         </h1>
-        <Slider
-          {...settings}
-          style={{ paddingTop: "60px", paddingBottom: "90px" }}
-        >
-          <div
-            className="slick-slide"
-            style={{ background: "white", margin: "10px" }}
-          >
+        <Slider {...settings} className="pt-16 pb-24">
+          <div className="slick-slide bg-white m-2">
             <img
               src={exploreImg}
-              style={{ background: "white", padding: "20px" }}
+              className="bg-white p-5"
+              alt="Online Learning Platform"
             />
-            <h1
-              style={{
-                background: "white",
-                paddingBottom: "20px",
-                paddingLeft: "20px",
-              }}
-            >
-              Online Learning Platform
-            </h1>
+            <h1 className="bg-white pl-5 pb-5">Online Learning Platform</h1>
           </div>
-          <div className="slick-slide">
+          <div className="slick-slide bg-white m-2">
             <img
               src={exploreImg}
-              style={{ background: "white", padding: "20px" }}
+              className="bg-white p-5"
+              alt="Virtual Classrooms"
             />
-            <h1
-              style={{
-                background: "white",
-                paddingBottom: "20px",
-                paddingLeft: "20px",
-              }}
-            >
-              Virtual Classrooms
-            </h1>
+            <h1 className="bg-white pl-5 pb-5">Virtual Classrooms</h1>
           </div>
-          <div className="slick-slide">
+          <div className="slick-slide bg-white m-2">
             <img
               src={exploreImg}
-              style={{ background: "white", padding: "20px" }}
+              className="bg-white p-5"
+              alt="AI-Powered Personalization"
             />
-            <h1
-              style={{
-                background: "white",
-                paddingBottom: "20px",
-                paddingLeft: "20px",
-              }}
-            >
-              AI-Powered Personalization
-            </h1>
+            <h1 className="bg-white pl-5 pb-5">AI-Powered Personalization</h1>
           </div>
-          <div className="slick-slide">
-            <img
-              src={exploreImg}
-              style={{ background: "white", padding: "20px" }}
-            />
-            <h1
-              style={{
-                background: "white",
-                paddingBottom: "20px",
-                paddingLeft: "20px",
-              }}
-            >
-              service 1
-            </h1>
+          <div className="slick-slide bg-white m-2">
+            <img src={exploreImg} className="bg-white p-5" alt="Service 1" />
+            <h1 className="bg-white pl-5 pb-5">Service 1</h1>
           </div>
-          <div className="slick-slide">
-            <img
-              src={exploreImg}
-              style={{
-                background: "white",
-                padding: "20px",
-                paddingLeft: "20px",
-              }}
-            />
-            <h1
-              style={{
-                background: "white",
-                paddingBottom: "20px",
-                paddingLeft: "20px",
-              }}
-            >
-              service 2
-            </h1>
+          <div className="slick-slide bg-white m-2">
+            <img src={exploreImg} className="bg-white p-5" alt="Service 2" />
+            <h1 className="bg-white pl-5 pb-5">Service 2</h1>
           </div>
         </Slider>
       </div>
 
-      <div
-        style={{
-          background: "#E8E8E8",
-          marginTop: "30px",
-          marginBottom: "30px",
-        }}
-      >
-        <h1
-          style={{
-            textAlign: "center",
-            fontSize: "48px",
-            fontWeight: "700",
-            padding: "50px",
-          }}
-        >
+      <div className="bg-gray-200 my-8">
+        <h1 className="text-center text-4xl font-extrabold py-12">
           Core Values
         </h1>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            margin: "auto",
-          }}
-        >
-          <div style={{ position: "relative" }}>
+        <div className="flex justify-center mx-auto relative">
+          <div className="relative">
             <img
               src={CoreValuePic}
-              style={{
-                display: "block",
-                margin: "auto",
-                position: "relative",
-                width: "696px",
-                maxWidth: "80vw",
-              }}
+              className="block mx-auto relative w-full max-w-[80vw] sm:max-w-[70vw] md:max-w-[60vw]"
+              alt="Core Values"
             />
-            <div
-              style={{
-                position: "absolute",
-                top: "50px",
-                left: "-200px",
-                padding: "25px",
-                background: "white",
-                borderRadius: "5px",
-                width: "333px",
-              }}
-            >
-              <h1 className="coreValue_heading">Innovation</h1>
-              <p className="coreValue_desc">
+
+            {/* Innovation */}
+            <div className="absolute top-12 left-[0px]  md:left-[-200px] md:p-6  bg-white rounded-lg ">
+              <h1 className=" text-xl  font-semibold text-lg  text-base md:text-sm">
+                Innovation
+              </h1>
+              <p className=" text-sm sm:text-xs text-[10px]  pr-6 md:text-xs">
                 Pushing the boundaries of what's <br /> possible in education.
               </p>
             </div>
-            <div
-              style={{
-                position: "absolute",
-                bottom: "50px",
-                left: "-200px",
-                padding: "25px",
-                paddingRight: "0px",
-                background: "white",
-                borderRadius: "5px",
-                width: "333px",
-              }}
-            >
-              <h1 className="coreValue_heading">Assessibility</h1>
-              <p className="coreValue_desc">
+
+            {/* Accessibility */}
+            <div className="absolute bottom-12  left-[0px] md:left-[-200px] md:p-6 bg-white rounded-lg ">
+              <h1 className=" text-xl font-semibold text-lg sm:text-base md:text-sm">
+                Accessibility
+              </h1>
+              <p className=" text-sm sm:text-xs text-[10px] md:text-xs">
                 Ensuring quality learning opportunities <br /> for everyone,
                 everywhere.
               </p>
             </div>
-            <div
-              style={{
-                position: "absolute",
-                top: "50px",
-                right: "-200px",
-                padding: "25px",
-                background: "white",
-                borderRadius: "5px",
-                width: "333px",
-              }}
-            >
-              <h1 className="coreValue_heading">Excellence</h1>
-              <p className="coreValue_desc">
+
+            {/* Excellence */}
+            <div className="absolute top-12 right-[0px] md:right-[-200px] md:p-6 bg-white rounded-lg ">
+              <h1 className=" text-xl font-semibold text-lg sm:text-base md:text-sm">
+                Excellence
+              </h1>
+              <p className=" text-sm sm:text-xs text-[10px] md:text-xs">
                 Striving for the highest standards in <br /> technology and
                 pedagogy.
               </p>
             </div>
-            <div
-              style={{
-                position: "absolute",
-                bottom: "50px",
-                right: "-200px",
-                padding: "25px",
-                background: "white",
-                borderRadius: "5px",
-                width: "333px",
-              }}
-            >
-              <h1 className="coreValue_heading">Collaboration</h1>
-              <p className="coreValue_desc">
+
+            {/* Collaboration */}
+            <div className="absolute bottom-12 right-[0px] md:right-[-200px] md:p-6 bg-white rounded-lg ">
+              <h1 className=" text-xl font-semibold text-lg sm:text-base md:text-sm">
+                Collaboration
+              </h1>
+              <p className=" text-sm sm:text-xs text-[10px] md:text-xs">
                 Building meaningful partnerships to <br /> maximize impact.
               </p>
             </div>
