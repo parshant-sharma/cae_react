@@ -187,6 +187,7 @@ const Header = () => {
               onMouseLeave={(e) => {
                 e.target.style.color = "#1e40af";
               }}
+              onClick={() => setShowMobileNav(false)}
             >
               Home
             </Link>
@@ -206,6 +207,7 @@ const Header = () => {
               onMouseLeave={(e) => {
                 e.target.style.color = "#000";
               }}
+              onClick={() => setShowMobileNav(false)}
             >
               Services
             </Link>
@@ -225,6 +227,7 @@ const Header = () => {
               onMouseLeave={(e) => {
                 e.target.style.color = "#000"; // revert to black
               }}
+              onClick={() => setShowMobileNav(false)}
             >
               Contact
             </Link>
@@ -244,6 +247,7 @@ const Header = () => {
               onMouseLeave={(e) => {
                 e.target.style.color = "#000"; // revert to black
               }}
+              onClick={() => setShowMobileNav(false)}
             >
               About
             </Link>
@@ -263,6 +267,7 @@ const Header = () => {
               onMouseLeave={(e) => {
                 e.target.style.color = "#000";
               }}
+              onClick={() => setShowMobileNav(false)}
             >
               Support
             </Link>
